@@ -8,6 +8,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 .mtcl h2,
 .match-color {
@@ -212,14 +220,15 @@ ul.bmi-not {
 
 
 .random-quote .container {
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2.5px);
-    -webkit-backdrop-filter: blur(2.5px);
-    border-radius: 10px;
-    width: 35%;
+    background: rgba(90, 81, 81, 0.6);
+    width: 45%;
     margin: 100px auto;
-    padding: 40px;
+    padding: 100px 50px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
@@ -235,7 +244,7 @@ button#get-quote {
 }
 
 .random-quote .container h2 {
-    font-size: 35px;
+    font-size: 45px;
     padding: 15px;
 }
 
@@ -243,6 +252,11 @@ button#get-quote {
     font-size: 22px;
     margin: 15px auto;
     margin-bottom: 5px;
+}
+
+.random-quote .container #qouta-cat,
+.random-quote .container p#qouta-author {
+    display: none;
 }
 
 .loding-gif {
@@ -264,4 +278,14 @@ button#get-quote {
     color: #333;
     font-size: 24px;
     font-family: Arial, sans-serif;
+}
+
+.section {
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+}
+
+.section.active {
+    opacity: 1;
+    color: #000;
 }

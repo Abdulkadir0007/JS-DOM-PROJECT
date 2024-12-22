@@ -52,7 +52,8 @@ function defaul(){
   const author = i.author;
   quoteText.innerHTML = '<q>'+Qouta+'</q>'
   quoteAuthor.innerHTML = author;
- quoteAuthor.style.textAlign = 'end'
+  quoteAuthor.style.textAlign = 'end'
+  quoteAuthor.style.display = 'block'
 }
 defaul()
 quoteButton.addEventListener('click',defaul)

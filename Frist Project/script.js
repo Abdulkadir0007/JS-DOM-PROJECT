@@ -98,11 +98,40 @@ bmiSub.addEventListener('click', function () {
 });
 
 
-// window.addEventListener('load', function () {
-//     const loader = document.getElementById('loader');
-//     const content = document.getElementById('content');
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader');
+    const content = document.getElementById('content');
 
-//     setTimeout(() => {
-//         loader.style.display = 'none';
-//     }, 2000);
-// });
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 1200);
+});
+
+
+// ফাংশন যা সক্রিয় সেকশন হাইলাইট করে
+function highlightSection() {
+    const sections = document.querySelectorAll(".section");
+    const scrollPosition = window.scrollY;
+  
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop; // সেকশনের শুরুর পজিশন
+      const sectionHeight = section.offsetHeight;
+  
+      // স্ক্রল অবস্থান চেক করা
+      if (
+        scrollPosition >= sectionTop - sectionHeight / 3 &&
+        scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
+      ) {
+        section.classList.add("active"); // আলো জ্বালান
+      } else {
+        section.classList.remove("active"); // আলো বন্ধ করুন
+      }
+    });
+  }
+  
+  // স্ক্রল ইভেন্টে ফাংশন ট্রিগার করুন
+  window.addEventListener("scroll", highlightSection);
+  
+  // পেজ লোড হলে প্রথমবারের জন্য হাইলাইট ফাংশন চালু করুন
+  highlightSection();
+  
