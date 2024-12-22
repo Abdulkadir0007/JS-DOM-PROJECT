@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Frist Project</title>
 </head>
+
 <body>
-    <h2>Hello Word</h2>
+    <!-- Section for Color Matching -->
+    <div class="match-color">
+        <ul class="mtcl">
+            <h2>Color Change</h2>
+            <div class="list-li">
+                <li class="default">Default</li>
+                <li class="red">Red</li>
+                <li class="yellow">Yellow</li>
+                <li class="purple">Purple</li>
+                <li class="green">Green</li>
+                <li class="navvy">Navvy</li>
+            </div>
+        </ul>
+    </div>
+    <!-- Section for BMI Calculator -->
+    <div class="bmi-cal">
+        <div class="container">
+            <form action="">
+                <h2 class="title">Calculet Your BMI</h2>
+                <div class="bmi-wight">
+                    <input type="range" name="wight" max="200" min="20" value="50" id="wight">
+                    <p>WEIGHT:
+                        <input type="text" name="showweight" id="showweight" value="50" readonly>
+                        <span>kg</span>
+                    </p>
+                </div>
+                <div class="bmi-height">
+                    <input type="range" name="height" max="250" min="100" value="150" id="height">
+                    <p>HEIGHT:
+                        <input type="text" name="showheight" id="showheight" value="150">
+                        <span>cm</span>
+                    </p>
+                </div>
+                <input id="cl-button" type="button" value="CALCULATE">
+            </form>
+            <div class="bmi-result"><strong>Your BMI : <p class="show-bmi"></p></strong>
+
+            </div>
+            <div class="bmi-not">
+                <p class="bani"></p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Random Quote Section -->
+    <div class="random-quote">
+        <div class="container">
+            <h2>Random Quote</h2>
+            <div class="quote-container">
+                <p id="quote-text"><img src="img/loding.gif" alt="" srcset="" class="loding-gif"></p>
+                <p id="qouta-author"><img src="img/loding.gif" alt="" srcset="" class="loding-gif"></p>
+                <button id="get-quote" type="button">New Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="loader">
+        <p><img src="img/loding2.gif" alt="" srcset=""></p>
+    </div> -->
+    <script src="script.js"></script>
+    <!-- <script src="scriptobj.js"></script> -->
+    <script src="scriptapi.js"></script>
 </body>
+
 </html>

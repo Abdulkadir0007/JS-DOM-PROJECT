@@ -1,0 +1,267 @@
+/* Universal Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.mtcl h2,
+.match-color {
+    background-color: #EC6059;
+    box-shadow: 0 7px 2rem #EC6059;
+}
+
+.match-color {
+    font-family: sans-serif;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+ul {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 45%;
+    border-radius: 20px;
+    margin: 50px auto;
+    color: #fff;
+    padding: 15px 20px;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.mtcl h2 {
+    margin: 0;
+    position: sticky;
+    text-align: center;
+    padding: 30px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.mtcl li {
+    width: 40rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 3rem;
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.mtcl li.default {
+    background: #EC6059;
+}
+
+.mtcl li.red {
+    background: #FF0000;
+}
+
+.mtcl li.yellow {
+    background: #FFFF00;
+}
+
+.mtcl li.purple {
+    background: #800080;
+}
+
+.mtcl li.green {
+    background: #008000;
+}
+
+.mtcl li.navvy {
+    background: #0A1172;
+}
+
+/* BMI */
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 2px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2.5px solid #0A1172;
+    height: 20px;
+    width: 20px;
+    border-radius: 40px;
+    background: white;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: 2.5px solid #0A1172;
+    height: 16px;
+    width: 16px;
+    border-radius: 32px;
+    background: white;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+input[type="range"]:hover {
+    background: #bbb;
+}
+
+.bmi-cal {
+    background-color: #F0EEF0;
+    padding: 5px;
+    font-family: poppins;
+}
+
+.bmi-cal .container {
+    width: 35%;
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px 40px;
+    padding-bottom: 40px;
+}
+
+.bmi-cal .title {
+    margin: 0;
+    text-align: center;
+    padding: 30px;
+    font-size: 35px;
+}
+
+.bmi-cal p {
+    font-size: 22px;
+}
+
+.bmi-cal p input {
+    font-size: 22px;
+    background-color: #e8e4e4;
+    border: none;
+    padding: 3px 7px;
+    width: 60px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.bmi-cal p input:hover,
+.bmi-cal p input:focus {
+    border: none;
+    outline: none;
+}
+
+.bmi-cal p span {
+    font-size: 18px;
+}
+
+#cl-button {
+    font-size: 15px;
+    background-color: #0A1172;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    border-color: #0A1172;
+    padding: 7px 20px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.bmi-wight {
+    margin: 30px auto;
+}
+
+.bmi-height {
+    margin: 30px auto;
+}
+
+.bmi-result strong {
+    font-size: 22px;
+}
+
+p.show-bmi {
+    font-size: 22px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+ul.bmi-not {
+    text-align: left;
+    color: #000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.random-quote {
+    background-image: url(img/monuntain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.random-quote .container {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+    width: 35%;
+    margin: 100px auto;
+    padding: 40px;
+
+}
+
+button#get-quote {
+    font-size: 15px;
+    background-color: #0A1172;
+    color: #fff;
+    border-radius: 5px;
+    border-color: #0A1172;
+    padding: 7px 20px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+
+.random-quote .container h2 {
+    font-size: 35px;
+    padding: 15px;
+}
+
+.random-quote .container p#quote-text {
+    font-size: 22px;
+    margin: 15px auto;
+    margin-bottom: 5px;
+}
+
+.loding-gif {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f5;
+    color: #333;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
