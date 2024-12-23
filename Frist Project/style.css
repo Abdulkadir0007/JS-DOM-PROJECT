@@ -283,8 +283,40 @@ button#get-quote {
 .section {
     opacity: 0.1;
     transition: all 0.5s ease-in-out;
+    height: auto;
 }
 
 .section.active {
     opacity: 1;
+}
+
+section.img-api {
+    background-color: #fff;
+}
+
+section.img-api .container {
+    overflow: hidden;
+    padding: 10px;
+}
+
+section.img-api .container .image-box {
+    background-color: #bbb;
+    width: 40%;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+section.img-api .container .image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+section.img-api .container .image-box .img-author {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
 }

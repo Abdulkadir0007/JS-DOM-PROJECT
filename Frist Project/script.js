@@ -98,40 +98,90 @@ bmiSub.addEventListener('click', function () {
 });
 
 
-window.addEventListener('load', function () {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+//?IMG API
 
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 1200);
-});
+const imgBoxes = document.querySelector('.img-boxes')
+const urlAPI = 'https://picsum.photos/v2/list';
+
+const getImg = ()=>{
+    fetch(urlAPI).then(data=>data.json()).then(items=>{
+        console.log(items);
+        const itemsEntries = Object.entries(items);
+        function randomItems(array){
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array;
+        }
+        const randomFive = randomItems(itemsEntries).slice(0, 2);
+        console.log(randomFive);
 
 
-// ফাংশন যা সক্রিয় সেকশন হাইলাইট করে
+        // items.forEach(function(img){
+        //     const newBox = document.createElement('div');
+        //     newBox.classList.add('image-box');
+
+        //     const addImg = document.createElement('img');
+        //     addImg.src = img.download_url;
+        //     newBox.appendChild(addImg)
+            
+        //     const imgAuthor = document.createElement('h3');
+        //     imgAuthor.classList.add('img-author');
+        //     imgAuthor.textContent = img.author;
+        //     newBox.appendChild(imgAuthor)
+        //     imgBoxes.appendChild(newBox)
+        // })
+        randomFive.forEach(([key, value]) => {
+            const newBox = document.createElement('div');
+            newBox.classList.add('image-box');
+
+            const addImg = document.createElement('img');
+            addImg.src = value.download_url;
+            newBox.appendChild(addImg)
+            
+            const imgAuthor = document.createElement('h3');
+            imgAuthor.classList.add('img-author');
+            imgAuthor.textContent = value.author;
+            newBox.appendChild(imgAuthor)
+            imgBoxes.appendChild(newBox)
+          });
+    });
+}
+getImg()
+
+//?Loded
+// window.addEventListener('load', function () {
+//     const loader = document.getElementById('loader');
+//     const content = document.getElementById('content');
+
+//     setTimeout(() => {
+//         loader.style.display = 'none';
+//     }, 1200);
+// });
+
+
+//? Screen Light on off
 function highlightSection() {
     const sections = document.querySelectorAll(".section");
     const scrollPosition = window.scrollY;
   
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop; // সেকশনের শুরুর পজিশন
+      const sectionTop = section.offsetTop; 
       const sectionHeight = section.offsetHeight;
-  
-      // স্ক্রল অবস্থান চেক করা
       if (
         scrollPosition >= sectionTop - sectionHeight / 3 &&
         scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
-      ) {
-        section.classList.add("active"); // আলো জ্বালান
+      )
+       {
+        section.classList.add("active"); 
       } else {
-        section.classList.remove("active"); // আলো বন্ধ করুন
+        section.classList.remove("active"); 
       }
     });
   }
   
-  // স্ক্রল ইভেন্টে ফাংশন ট্রিগার করুন
   window.addEventListener("scroll", highlightSection);
-  
-  // পেজ লোড হলে প্রথমবারের জন্য হাইলাইট ফাংশন চালু করুন
+
   highlightSection();
   
