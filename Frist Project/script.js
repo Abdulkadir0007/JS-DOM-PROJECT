@@ -162,26 +162,26 @@ getImg()
 
 
 //? Screen Light on off
-function highlightSection() {
-    const sections = document.querySelectorAll(".section");
-    const scrollPosition = window.scrollY;
+// function highlightSection() {
+//     const sections = document.querySelectorAll(".section");
+//     const scrollPosition = window.scrollY;
   
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop; 
-      const sectionHeight = section.offsetHeight;
-      if (
-        scrollPosition >= sectionTop - sectionHeight / 3 &&
-        scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
-      )
-       {
-        section.classList.add("active"); 
-      } else {
-        section.classList.remove("active"); 
-      }
-    });
-  }
+//     sections.forEach((section) => {
+//       const sectionTop = section.offsetTop; 
+//       const sectionHeight = section.offsetHeight;
+//       if (
+//         scrollPosition >= sectionTop - sectionHeight / 3 &&
+//         scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
+//       )
+//        {
+//         section.classList.add("active"); 
+//       } else {
+//         section.classList.remove("active"); 
+//       }
+//     });
+//   }
   
-  window.addEventListener("scroll", highlightSection);
+//   window.addEventListener("scroll", highlightSection);
 
-  highlightSection();
+//   highlightSection();
   
