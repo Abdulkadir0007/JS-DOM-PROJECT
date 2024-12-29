@@ -13,16 +13,30 @@ JavaScript is a **single-threaded** language, meaning it can execute only one li
 
 ---
 
+# JavaScript Execution Workflow
 ![JS-DOM-PROJECT Screenshot](./screenshot.png)
-## JavaScript Execution Workflow
-JavaScript একটি **interpreted language**, অর্থাৎ এটি ব্রাউজারে সরাসরি রান হয়। এটি:
-- **Object-Oriented**: বিভিন্ন অবজেক্ট তৈরি করে কাজ করা যায়।
-- **Event-Driven**: ইভেন্ট যেমন ক্লিক, স্ক্রোল ইত্যাদির জন্য রেসপন্স দেয়।
-- **Cross-Platform**: যে কোনো ব্রাউজারে কাজ করে।
-- **Lightweight**: সহজ ও দ্রুত।
+## 1. JavaScript Engine
+- **I. Call Stack**: Here all **synchronous** tasks are executed one after the other.
+- **II.Memory Heap**: Data is stored here (like variables, objects, etc.).
+## 2. Web APIs
+- **I. Asynchronous** tasks (such as setTimeout, fetch, DOM events) are handled by the browser or Node.js' **Web APIs**.
+## 3. Task Queue (Callback Queue)
+- **I.** When Web APIs complete a task, send the **callback** for that task here.
+## 4. Microtask Queue
+- **I.** This **Queue** is used for **.then()** or **.catch()** of Promise or Fetch API.
+- **II. Microtask Queue** always has higher priority than **Task Queue.**
+## 5. Event Loop
+- **I.** The **Event Loop** constantly checks, if the **Call Stack** is empty, moves the task from the **Task Queue** or **Microtask Queue** to the Call Stack and executes it.
+
+
+## 📬 Contact Me
+- **Email**: [mabdulkadir5g@gmail](mailto:mabdulkadir5g@gmail.com)  
+- **Facebook**: [AbdulKadir](https://www.facebook.com/abdul.kadir.320045/)  
+- **Website**: [mdabdulkadir.com](https://mdabdulkadir.com)  
+- **GitHub**: [AbdulKadir0007](https://github.com/AbdulKadir0007)  
 
 ---
 
-## প্রোজেক্টের স্ক্রিনশট
-নীচে প্রোজেক্টের একটি স্ক্রিনশট দেওয়া হলো:
+## 🌐 Let's Connect!  
+Feel free to reach out if you'd like to collaborate or learn more about my work. 
 
